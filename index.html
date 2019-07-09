@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Piskel Clone</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <div class="head__title">
+      <img class="piskel-logo" src="logo_transparent_small_compact.png">
+      <h1>Piskel Clone</h1>
+    </div>
+  </header>
+  <section class="landing-page">
+    <section class="landing-page__app-info">
+      <span>
+        Simplified clone of the <a class="piskel-link" href="https://www.piskelapp.com/">Piskel</a>,
+        which is a web-based tool for Spriting and Pixel art.
+      </span>
+      <button class="landing-page__create-sprite">Create Sprite</button>
+    </section>
+    <img class="landing-page__piskel-image" src="Piskel.png">
+  </section>
+  <section class="app">
+    <main class="main_layout">
+      <section class="menu__palette">
+        <div class="menu">
+          <div class="menu__tool-size">
+            <i class="fas fa-square unit1"></i>
+            <i class="fas fa-square unit2"></i>
+            <i class="fas fa-square unit3"></i>
+            <i class="fas fa-square unit4"></i>
+          </div>
+          <div class="menu__pen pen">
+            <icon class="fas fa-pen icon"></icon>
+            <span>Pen</span>
+          </div>
+          <div class="menu__paint-bucket paintBucket">
+            <icon class="fas fa-fill-drip icon"></icon>
+            <span>Paint bucket</span>
+          </div>
+          <div class="menu__color-chooser chooseColor">
+            <icon class="fas fa-eye-dropper icon"></icon>
+            <span>Choose color</span>
+            <input type="color" class="pick">
+          </div>
+          <div class="menu__eraser eraser">
+            <icon class="fas fa-eraser icon"></icon>
+            <span>Eraser</span>
+          </div>
+        </div>
+        <div class="palette">
+          <div class="palette__curr-color">
+            <input type="color" class="currColor icon pick">
+            <span>Current color</span>
+          </div>
+          <div class="palette__prev-color">
+            <input type="color" class="prevColor icon pick">
+            <span>Prev color</span>
+          </div>
+        </div>
+        <button type="submit" class="addFrame">Add new frame</button>
+      </section>
+
+      <section class="frames">
+        <div class="frame__wrapper">
+          <canvas class="frame"></canvas>
+          <div class="icons__wrapper">
+            <icon class="fas fa-trash-alt delete"></icon>
+            <icon class="fas fa-copy icon copy"></icon>
+          </div>
+        </div>
+      </section>
+      <section class="mainCanvas">
+        <canvas class="canvas"></canvas>
+      </section>
+      <section class="animationPreview">
+        <div class="animation__wrapper">
+          <canvas class="animation"></canvas>
+          <icon class="fas fa-expand expand"></icon>
+        </div>
+        <div class="fpsRange">
+          <form class="fpsInput">
+            <label for="fps">FPS</label>
+            <input type="range" class="fps" name="fps" min="1" max="24" value="14" />
+            <input type="number" class="fpsNum" name="fpsNum" min="1" max="24" value="14" />
+          </form>
+        </div>
+      </section>
+    </main>
+  </section>
+  <script src="./app.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+</body>
+
+</html>
